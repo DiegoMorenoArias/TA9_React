@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 const Counter = () => {
   const [count, setCount] = useState(0);
-  document.title = `Contador ${count}` // Sólo se agregó esta línea respecto al TA4 xd
   // Incrementa usando el anterior
   const incrementar = () => {
     setCount(prevCount => prevCount + 1);
@@ -20,7 +19,7 @@ const Counter = () => {
 
   // Uso useEffect para mostrar un mensaje en consola cuando cambie
   useEffect(() => {
-    console.log(`Número: ${count}`);
+    document.title = `Contador ${count}` // Sólo se agregó esta línea respecto al TA4 xd
   }, [count]);
 
   return (
